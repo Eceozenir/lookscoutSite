@@ -1,0 +1,230 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Inter;
+}
+
+.container{
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: 16px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    gap: 64px;
+    padding-block: 16px;
+    align-items: center;
+    padding: 20px 80px;
+}
+
+.items{
+    display: none;
+
+}
+
+.navbar{
+    display: none;
+}
+
+.element::before{
+    content: "of it.";
+
+}
+
+.element::after{
+    content: "best ever help.";
+}
+
+.desktopVisible{
+    display: none;
+}
+
+.mainPlace{
+    padding: 32px 16px 42px 16px;
+}
+
+.blueHeader{
+    font-size: 14px;
+    font-weight: 600;
+    color: #437EF7;
+    text-align: center;
+}
+
+.desktopHeader{
+    font-size: 36px;
+    font-weight: 600;
+    color: #272D37;
+    text-align: center;
+
+}
+
+
+
+.card{
+    display: flex;
+    gap: 12px;
+
+}
+
+.cardsHeader{
+    font-size: 20px;
+    font-weight: 600;
+    color: #272D37;
+}
+
+.cardsParagraph{
+    font-size: 16px;
+    font-weight: 400;
+    color: #5F6D7E;
+}
+
+.text{
+    font-size: 14px;
+    font-weight: 500;
+    color: #5F6D7E;
+}
+
+.date{
+    display: flex;
+    gap: 13px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.leftCardsImg{
+    width: 580px;
+}
+
+
+
+/*Tablet*/
+@media (width >= 768px){
+    .mainPlace{
+        padding: 68px 48px 88px 48px;
+    }
+
+    .desktopHeader{
+        font-size: 52px;
+        font-weight: 700; 
+    }
+
+}
+
+/*Desktop*/
+@media (width >= 1200px){
+    .hamMenu{
+        display: none;
+    }
+
+    .items{
+        display: flex;
+        list-style-type: none;
+        gap: 32px;
+        align-items: center;
+        font-size: 15px;
+        font-weight: 600;
+        color: #272D37;
+        margin-right: auto;
+    }
+
+    .navbar{
+        display: block;
+    }
+
+    .btns{
+        text-decoration: none;
+        background-color: #437EF7;
+        color: #fff;
+        padding: 12px 18px;
+        border-radius: 6px;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .btn-ghost{
+        background: transparent;
+        color: #437EF7;
+    }
+
+    .element::before{
+        content: " ";
+    }
+
+    .element::after{
+        content: " ";
+    }
+
+    .desktopVisible{
+        display: inline;
+    }
+
+    .mainPlace{
+        padding: 80px 320px 92px 320px;
+    }
+
+    .desktopHeader{
+        font-size: 52px;
+        font-weight: 700; 
+    }
+
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+.card a{
+    color: white;
+    background-color: #437EF7;
+    border: #437EF7;
+    padding:5px;
+    border-radius: 5px;
+    margin: 4px;
+    text-decoration: none;
+}
+
+.model-container{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.model-container img{
+    width: 50%;
+    margin: 20px auto;
+    display: block;
+}
+.model-container p{
+    text-align: center;
+    color: white;
+}
+
+
+.close{
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover,
+.close:focus{
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
